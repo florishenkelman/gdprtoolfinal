@@ -13,16 +13,16 @@ Maven.
 Stappenplan installatie
 
  Open je IDE;
-Open de terminal, en controleer of NodeJS is geïnstalleerd op je computer door "node -v" in te terminal te typen;
-Mocht dit niet geïnstalleerd zijn ga naar : https://nodejs.org/en/download/;
-Zorg dat je ingelogd bent in PgAdmin4 voordat je de gdpr-applicatie gaat starten. Als je PgAdmin nog niet hebt kun je deze downloaden via https://www.pgadmin.org/download/;
-Download het project als ZIP van Github door via de knop <> Code;
-Klik na het downloaden op de folder met de rechtermuisknop, en open het bestand in je IDE, of open je IDE en open de folder vanuit je IDE;
-Ga in je IDE naar de terminal en type ‘npm install’ voor de noodzakelijke packages;
-Zorg dat het wachtwoord van je database in PgAdmin overeenkomst in de applicatie, dit kun je vinden via main > resources > application.properties > Database Configuration > spring.datasource.password = password;
-Start de applicatie vanuit de folders: src > main > java > GdprApplication > klik op: Run public class GdprApplication;
-Type daarna ‘npm run dev’ of klik op ‘run dev’ bij de run knop;
-Alternatief voor de voorgaande stap: ga naar de folder UI > package.json > Run de applicatie via ‘’dev’’: “vite”,
+  Open de terminal, en controleer of NodeJS is geïnstalleerd op je computer door "node -v" in te terminal te typen;
+  Mocht dit niet geïnstalleerd zijn ga naar : https://nodejs.org/en/download/;
+  Zorg dat je ingelogd bent in PgAdmin4 voordat je de gdpr-applicatie gaat starten. Als je PgAdmin nog niet hebt kun je deze downloaden via https://www.pgadmin.org/download/;
+  Download het project als ZIP van Github door via de knop <> Code;
+  Klik na het downloaden op de folder met de rechtermuisknop, en open het bestand in je IDE, of open je IDE en open de folder vanuit je IDE;
+  Ga in je IDE naar de terminal en type ‘npm install’ voor de noodzakelijke packages;
+  Zorg dat het wachtwoord van je database in PgAdmin overeenkomst in de applicatie, dit kun je vinden via main > resources > application.properties > Database Configuration > spring.datasource.password = password;
+  Start de applicatie vanuit de folders: src > main > java > GdprApplication > klik op: Run public class GdprApplication;
+  Type daarna ‘npm run dev’ of klik op ‘run dev’ bij de run knop;
+  Alternatief voor de voorgaande stap: ga naar de folder UI > package.json > Run de applicatie via ‘’dev’’: “vite”,
 Je wordt als het goed doorgestuurd naar je browser op local host http://localhost:5173/, en je hebt de applicatie geopend!
 Krijg je een andere url? Open http://localhost:5173/ in je browser.
 Om gebruik te maken van de applicatie moet je een account aanmaken met je naam, e-mailadres, functie, en een wachtwoord.
