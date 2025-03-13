@@ -14,6 +14,7 @@ Stappenplan installatie
 
  Open je IDE;
 Open de terminal, en controleer of NodeJS is geïnstalleerd op je computer door "node -v" in te terminal te typen;
+
 Mocht dit niet geïnstalleerd zijn ga naar : https://nodejs.org/en/download/;
 Zorg dat je ingelogd bent in PgAdmin4 voordat je de gdpr-applicatie gaat starten. Als je PgAdmin nog niet hebt kun je deze downloaden via https://www.pgadmin.org/download/;
 Download het project als ZIP van Github door via de knop <> Code;
