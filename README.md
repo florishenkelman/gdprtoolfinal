@@ -13,9 +13,9 @@ Maven.
 Stappenplan installatie
 
  Open je IDE;
-  Open de terminal, en controleer of NodeJS is geïnstalleerd op je computer door "node -v" in te terminal te typen;
-  Mocht dit niet geïnstalleerd zijn ga naar : https://nodejs.org/en/download/;
-  Zorg dat je ingelogd bent in PgAdmin4 voordat je de gdpr-applicatie gaat starten. Als je PgAdmin nog niet hebt kun je deze downloaden via https://www.pgadmin.org/download/;
+ Open de terminal, en controleer of NodeJS is geïnstalleerd op je computer door "node -v" in te terminal te typen;  
+ Mocht dit niet geïnstalleerd zijn ga naar : https://nodejs.org/en/download/;  
+ Zorg dat je ingelogd bent in PgAdmin4 voordat je de gdpr-applicatie gaat starten. Als je PgAdmin nog niet hebt kun je deze downloaden via https://www.pgadmin.org/download/;
   Download het project als ZIP van Github door via de knop <> Code;
   Klik na het downloaden op de folder met de rechtermuisknop, en open het bestand in je IDE, of open je IDE en open de folder vanuit je IDE;
   Ga in je IDE naar de terminal en type ‘npm install’ voor de noodzakelijke packages;
