@@ -1,0 +1,117 @@
+/* Login.css */
+
+.login-container {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 1rem;
+    background-color: var(--background-color);
+}
+
+.login-content {
+    max-width: 400px;
+    width: 100%;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.login-title {
+    margin-top: 1.5rem;
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--text-primary);
+}
+
+.login-form {
+    margin-top: 2rem;
+}
+
+.login-input-group {
+    margin-bottom: 1rem;
+}
+
+.login-input {
+    display: block;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 0.875rem;
+    background-color: var(--input-bg);
+    color: var(--text-primary);
+}
+
+.login-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+    box-shadow: 0 0 0 2px var(--primary-color-light);
+}
+
+.login-button {
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 0.5rem 0.75rem;
+    background-color: var(--primary-color);
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 500;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-button:hover {
+    background-color: var(--primary-color-dark);
+}
+
+.login-button:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.login-link {
+    margin-top: 1rem;
+    font-size: 0.875rem;
+    color: var(--secondary-color);
+}
+
+.login-link a {
+    font-weight: 500;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+.login-link a:hover {
+    color: var(--link-hover-color);
+}
+
+/* Dark Mode Variables */
+:root {
+    --background-color: #f9fafb;
+    --text-primary: #1f2937;
+    --border-color: #d1d5db;
+    --input-bg: #ffffff;
+    --primary-color: #4f46e5;
+    --primary-color-light: rgba(79, 70, 229, 0.2);
+    --primary-color-dark: #4338ca;
+    --secondary-color: #6b7280;
+    --link-color: #4f46e5;
+    --link-hover-color: #4338ca;
+}
+
+.dark-mode {
+    --background-color: #111827;
+    --text-primary: #f9fafb;
+    --border-color: #374151;
+    --input-bg: #1f2937;
+    --primary-color: #2563eb;
+    --primary-color-light: rgba(37, 99, 235, 0.2);
+    --primary-color-dark: #1e40af;
+    --secondary-color: #9ca3af;
+    --link-color: #2563eb;
+    --link-hover-color: #1e40af;
+}

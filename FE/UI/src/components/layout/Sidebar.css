@@ -1,0 +1,138 @@
+/* Sidebar styles */
+.sidebar-container {
+    width: 250px;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--sidebar-bg);
+    color: var(--sidebar-text);
+    box-shadow: 2px 0 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease, background-color 0.3s ease, color 0.3s ease;
+    transform: translateX(-100%);
+    z-index: 100;
+}
+
+.sidebar-container.open {
+    transform: translateX(0);
+}
+
+.sidebar-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.sidebar-title {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.close-btn {
+    background: none;
+    border: none;
+    color: var(--sidebar-text);
+    cursor: pointer;
+    transition: color 0.2s ease;
+}
+
+.close-btn:hover {
+    color: var(--accent-color);
+}
+
+.avatar-section {
+    padding: 16px;
+    border-bottom: 1px solid var(--divider-color);
+}
+
+.sidebar-nav {
+    padding: 16px;
+}
+
+.nav-item {
+    display: flex;
+    align-items: center;
+    padding: 10px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: var(--sidebar-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.nav-item.active {
+    background-color: var(--sidebar-active-bg);
+    color: var(--sidebar-active-text);
+}
+
+.nav-item:hover {
+    background-color: var(--sidebar-hover-bg);
+    color: var(--sidebar-hover-text);
+}
+
+.nav-icon {
+    margin-right: 10px;
+    color: inherit;
+    font-size: 1.2rem;
+}
+
+.sidebar-footer {
+    position: absolute;
+    bottom: 16px;
+    width: 100%;
+    padding: 16px;
+    border-top: 1px solid var(--divider-color);
+}
+
+.logout-btn {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    background: none;
+    color: var(--sidebar-text);
+    font-size: 1rem;
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+
+.logout-btn:hover {
+    color: var(--accent-color);
+}
+
+/* Overlay */
+.sidebar-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 99;
+}
+
+/* Dark mode variables */
+:root {
+    --sidebar-bg: #ffffff;
+    --sidebar-text: #333333;
+    --sidebar-hover-bg: #f0f0f0;
+    --sidebar-hover-text: #333333;
+    --sidebar-active-bg: #e0e0e0;
+    --sidebar-active-text: #000000;
+    --divider-color: #cccccc;
+    --accent-color: #007bff;
+}
+
+:root.dark {
+    --sidebar-bg: #1e1e1e;
+    --sidebar-text: #ffffff;
+    --sidebar-hover-bg: #2a2a2a;
+    --sidebar-hover-text: #ffffff;
+    --sidebar-active-bg: #3a3a3a;
+    --sidebar-active-text: #ffffff;
+    --divider-color: #444444;
+    --accent-color: #1a73e8;
+}

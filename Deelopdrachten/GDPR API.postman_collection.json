@@ -1,0 +1,635 @@
+{
+	"info": {
+		"_postman_id": "41807748-197f-4af0-9be3-8f26d30659c4",
+		"name": "GDPR API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "32362343"
+	},
+	"item": [
+		{
+			"name": "Authentication",
+			"item": [
+				{
+					"name": "Register admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"johndoe@gmail.commm\",\n  \"password\": \"YourStrongPassword123!\",\n  \"username\": \"johndoeee\",\n  \"jobTitle\": \"Developer\",\n  \"role\": \"ADMIN\"\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login admin",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									"pm.test(\"Status code is 200\", function () {",
+									"    pm.response.to.have.status(200);",
+									"});",
+									"pm.test(\"Response contains user ID\", function () {",
+									"    let jsonData = pm.response.json();",
+									"    pm.expect(jsonData).to.have.property(\"id\");",
+									"});"
+								],
+								"type": "text/javascript"
+							}
+						}
+					],
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}"
+							}
+						],
+						"url": {
+							"raw": "{{baseUrl}}/api/auth/me",
+							"host": [
+								"{{baseUrl}}"
+							],
+							"path": [
+								"api",
+								"auth",
+								"me"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Register editor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"email\": \"editoruser@example.com\",\n  \"username\": \"editor123\",\n  \"password\": \"Editor@123\",\n  \"jobTitle\": \"Content Manager\",\n  \"role\": \"EDITOR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Login editor",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\"email\": \"editoruser@example.com\",\n\"password\": \"Editor@123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/login",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "GDPR Articles",
+			"item": [
+				{
+					"name": "search article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Content-Type",
+								"value": "",
+								"disabled": true
+							},
+							{
+								"key": "Authorization: Bearer <your_token>\nContent-Type: application/json",
+								"value": "",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/gdpr/search?searchTerm=authority",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"gdpr",
+								"search"
+							],
+							"query": [
+								{
+									"key": "searchTerm",
+									"value": "authority"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "save article",
+					"event": [
+						{
+							"listen": "test",
+							"script": {
+								"exec": [
+									""
+								],
+								"type": "text/javascript",
+								"packages": {}
+							}
+						}
+					],
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer {{token}}",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/gdpr/saved/a70ffd4d-d866-4e1e-a019-6d04b538845d",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"gdpr",
+								"saved",
+								"a70ffd4d-d866-4e1e-a019-6d04b538845d"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "get all articles",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/gdpr",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"gdpr"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "tasks",
+			"item": [
+				{
+					"name": "create task",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Implement GDPR Compliance\",\n    \"description\": \"Ensure that the system follows GDPR compliance regulations.\",\n    \"priority\": \"HIGH\",\n    \"assigneeId\": \"1a28d392-bc97-44ab-9e28-11180f8c5c41\",\n    \"dueDate\": \"2025-02-10T23:59:59\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "update task",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"id\": \"c32d987a-1b49-4efb-91d7-60b4a8ffb7de\",\n    \"title\": \"Implement GDPR Compliance - Updated\",\n    \"description\": \"Ensure the system follows GDPR compliance regulations and update the privacy policy.\",\n    \"priority\": \"MEDIUM\",\n    \"status\": \"IN_PROGRESS\",\n    \"assigneeId\": \"1a28d392-bc97-44ab-9e28-11180f8c5c41\",\n    \"dueDate\": \"2025-02-15T23:59:59\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/51ec087c-6b24-4ff4-b605-82b211c15dfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"51ec087c-6b24-4ff4-b605-82b211c15dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "delete",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/tasks/51ec087c-6b24-4ff4-b605-82b211c15dfd",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"tasks",
+								"51ec087c-6b24-4ff4-b605-82b211c15dfd"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "add file",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "file",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "type",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "",
+									"value": "gdpr_document.pdf",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/attachments/ef35768a-365d-4f3a-8d02-46a69a4663e0",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"attachments",
+								"ef35768a-365d-4f3a-8d02-46a69a4663e0"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "Add a user",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"adminaddeduser@example.com\",\n    \"username\": \"adminuser\",\n    \"password\": \"SecureAdminPass123!\",\n    \"jobTitle\": \"Project Manager\",\n    \"role\": \"EDITOR\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/register",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "remove user as admin",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJqb2huZG9lZWUiLCJpYXQiOjE3MzgzNDQzMjksImV4cCI6MTczODQzMDcyOX0.a373nsOyBMwbpK7U3Htqk9Yir9fhz5yMRIzbIrVOUa0",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:8080/api/users/656f4b56-4c1a-44cb-90dd-08b9f4f46d0f",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8080",
+							"path": [
+								"api",
+								"users",
+								"656f4b56-4c1a-44cb-90dd-08b9f4f46d0f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

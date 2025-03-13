@@ -1,0 +1,113 @@
+/* General container styling */
+.article-list {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.article-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    font-size: 1rem;
+    color: #555;
+}
+
+/* Header styles */
+.article-header {
+    margin-bottom: 1.5rem;
+}
+
+.article-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.article-title.light-theme {
+    color: #333;
+}
+
+.article-title.dark-theme {
+    color: #eee;
+}
+
+/* Article container styles */
+.article-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.article-card {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.article-card.light-card {
+    background-color: #fff;
+    color: #333;
+}
+
+.article-card.dark-card {
+    background-color: #2d2d2d;
+    color: #ddd;
+}
+
+/* Card header styles */
+.article-card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.article-number {
+    font-size: 1.25rem;
+    font-weight: bold;
+}
+
+.save-article-button {
+    border: none;
+    border-radius: 0.375rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.save-article-button.light-button {
+    background-color: #e0e7ff;
+    color: #4f46e5;
+}
+
+.save-article-button.light-button:hover {
+    background-color: #c7d2fe;
+}
+
+.save-article-button.dark-button {
+    background-color: #3730a3;
+    color: #d1d5db;
+}
+
+.save-article-button.dark-button:hover {
+    background-color: #312e81;
+}
+
+/* Article content styles */
+.article-content {
+    margin-top: 0.5rem;
+    line-height: 1.6;
+    font-size: 0.875rem;
+}
+
+.article-content.light-card {
+    color: #555;
+}
+
+.article-content.dark-card {
+    color: #bbb;
+}

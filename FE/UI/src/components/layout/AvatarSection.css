@@ -1,0 +1,102 @@
+/* AvatarSection.css */
+
+/* Avatar Section Container */
+.avatar-section {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem; /* space-y-4 */
+}
+
+/* Header */
+.avatar-header {
+    display: flex;
+    align-items: center;
+    padding: 1rem; /* p-4 */
+    border-bottom: 1px solid #e5e7eb; /* border-gray-200 */
+}
+
+body.dark .avatar-header {
+    border-bottom-color: #374151; /* dark:border-gray-700 */
+}
+
+/* Avatar Image */
+.avatar-image {
+    border-radius: 9999px; /* rounded-full */
+    width: 2.5rem; /* w-10 */
+    height: 2.5rem; /* h-10 */
+    object-fit: cover; /* object-cover */
+}
+
+/* Upload Button */
+.avatar-upload-label {
+    position: absolute;
+    bottom: -0.25rem; /* -bottom-1 */
+    right: -0.25rem; /* -right-1 */
+    padding: 0.25rem; /* p-1 */
+    background-color: white; /* bg-white */
+    border-radius: 50%; /* rounded-full */
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out; /* transition-colors duration-200 */
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1); /* shadow-sm */
+}
+
+body.dark .avatar-upload-label {
+    background-color: #374151; /* dark:bg-gray-700 */
+}
+
+.avatar-upload-label:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+}
+
+body.dark .avatar-upload-label:hover {
+    background-color: #4b5563; /* dark:hover:bg-gray-600 */
+}
+
+.avatar-upload-label:disabled {
+    opacity: 0.5; /* opacity-50 */
+    cursor: not-allowed;
+}
+
+/* Camera Icon */
+.avatar-camera-icon {
+    width: 1rem; /* h-4 w-4 */
+    height: 1rem;
+    color: #4b5563; /* text-gray-600 */
+}
+
+body.dark .avatar-camera-icon {
+    color: #d1d5db; /* dark:text-gray-300 */
+}
+
+/* User Details */
+.user-details {
+    margin-left: 0.75rem; /* ml-3 */
+}
+
+.user-name {
+    font-size: 0.875rem; /* text-sm */
+    font-weight: 600; /* font-semibold */
+    color: #111827; /* text-gray-900 */
+}
+
+body.dark .user-name {
+    color: #ffffff; /* dark:text-white */
+}
+
+.user-email {
+    font-size: 0.75rem; /* text-xs */
+    color: #6b7280; /* text-gray-600 */
+}
+
+body.dark .user-email {
+    color: #9ca3af; /* dark:text-gray-400 */
+}
+
+/* Error Message */
+.error-message {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    font-size: 0.875rem; /* text-sm */
+    color: #b91c1c; /* text-red-800 */
+    background-color: #fee2e2; /* bg-red-100 */
+    border-radius: 0.375rem; /* rounded-md */
+}

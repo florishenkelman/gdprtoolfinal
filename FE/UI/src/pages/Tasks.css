@@ -1,0 +1,86 @@
+/* General color variables (light and dark) */
+:root {
+    --background-color: #f9f9f9;
+    --card-bg: #ffffff;
+    --text-color: #333333;
+    --primary-color: #007bff;
+    --primary-color-dark: #0056b3;
+    --input-background: #ffffff;
+    --input-border: #cccccc;
+    --hover-bg: #f1f1f1;
+    --item-bg: #f0f0f0;
+    --item-hover-bg: #e0e0e0;
+}
+
+:root.dark {
+    --background-color: #121212;
+    --card-bg: #1e1e1e;
+    --text-color: #ffffff;
+    --primary-color: #007bff;
+    --primary-color-dark: #0056b3;
+    --input-background: #2a2a2a;
+    --input-border: #444444;
+    --hover-bg: #333333;
+    --item-bg: #2a2a2a;
+    --item-hover-bg: #3a3a3a;
+}
+
+/* Tasks page */
+.tasks-page {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: var(--background-color);
+    color: var(--text-color);
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.page-title {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.filters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.filter-input,
+.filter-select {
+    flex: 1 1 300px;
+    background-color: var(--input-background);
+    color: var(--text-color);
+    border: 1px solid var(--input-border);
+    border-radius: 5px;
+    padding: 8px 10px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.filter-input:hover,
+.filter-select:hover {
+    background-color: var(--hover-bg);
+}
+
+/* Task list container */
+.task-list-container {
+    margin-top: 20px;
+}
+
+/* Buttons */
+button {
+    background-color: var(--primary-color);
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+button:hover {
+    background-color: var(--primary-color-dark);
+}

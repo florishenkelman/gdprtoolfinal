@@ -1,0 +1,68 @@
+/* General container styling */
+.saved-articles-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.saved-articles-title {
+    font-size: 1.125rem;
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.saved-articles-container.light .saved-articles-title {
+    color: #1f2937;
+}
+
+.saved-articles-container.dark .saved-articles-title {
+    color: #f3f4f6;
+}
+
+/* Article card styling */
+.saved-article-card {
+    padding: 1rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+}
+
+.saved-article-card.light {
+    background-color: #ffffff;
+    color: #1f2937;
+}
+
+.saved-article-card.dark {
+    background-color: #1f2937;
+    color: #e5e7eb;
+}
+
+.saved-article-number {
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+}
+
+.saved-article-title {
+    font-size: 0.875rem;
+    margin-top: 0.5rem;
+    color: inherit;
+}
+
+/* Loading state styling */
+.saved-articles-loading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 16rem;
+    font-size: 1rem;
+}
+
+.saved-articles-loading.light {
+    background-color: #f9fafb;
+    color: #1f2937;
+}
+
+.saved-articles-loading.dark {
+    background-color: #111827;
+    color: #e5e7eb;
+}

@@ -1,0 +1,121 @@
+/* TaskActions.css */
+
+/* Actions Container */
+.task-actions-container {
+    display: flex;
+    gap: 0.5rem; /* gap-2 */
+}
+
+/* Delete Button */
+.task-delete-button {
+    background-color: #ef4444; /* red-500 */
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 0.25rem; /* p-1 */
+    width: 2rem; /* w-8 */
+    height: 2rem; /* h-8 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.task-delete-button:hover {
+    background-color: #dc2626; /* red-600 */
+}
+
+/* Tooltip */
+.task-tooltip {
+    position: relative;
+    cursor: pointer;
+}
+
+.task-tooltip-text {
+    visibility: hidden;
+    background-color: black;
+    color: white;
+    text-align: center;
+    border-radius: 0.25rem; /* rounded */
+    padding: 0.5rem;
+    position: absolute;
+    z-index: 10;
+    bottom: 125%; /* Place tooltip above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    white-space: nowrap;
+}
+
+.task-tooltip:hover .task-tooltip-text {
+    visibility: visible;
+}
+
+/* Modal Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* semi-transparent background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 50;
+}
+
+/* Modal */
+.modal {
+    background-color: white;
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-lg */
+    padding: 1.5rem; /* p-6 */
+    width: 90%; /* responsive width */
+    max-width: 24rem; /* max-w-sm */
+}
+
+/* Modal Header */
+.modal-header {
+    font-size: 1.25rem; /* text-lg */
+    font-weight: 500; /* font-medium */
+    margin-bottom: 1rem;
+    color: #111827; /* gray-900 */
+}
+
+/* Modal Body */
+.modal-body {
+    font-size: 1rem; /* text-base */
+    color: #4b5563; /* gray-600 */
+    margin-bottom: 1.5rem;
+}
+
+/* Modal Footer */
+.modal-footer {
+    display: flex;
+    justify-content: flex-end;
+    gap: 1rem; /* gap-4 */
+}
+
+.modal-footer .modal-button {
+    padding: 0.5rem 1rem; /* px-4 py-2 */
+    font-size: 0.875rem; /* text-sm */
+    border-radius: 0.375rem; /* rounded-md */
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.modal-footer .modal-button.cancel {
+    background-color: #e5e7eb; /* gray-200 */
+    color: #374151; /* gray-700 */
+}
+
+.modal-footer .modal-button.cancel:hover {
+    background-color: #d1d5db; /* gray-300 */
+}
+
+.modal-footer .modal-button.delete {
+    background-color: #ef4444; /* red-500 */
+    color: white;
+}
+
+.modal-footer .modal-button.delete:hover {
+    background-color: #dc2626; /* red-600 */
+}

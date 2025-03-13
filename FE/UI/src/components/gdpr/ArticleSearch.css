@@ -1,0 +1,78 @@
+/* General container styling */
+.article-search {
+    max-width: 600px;
+    position: relative;
+}
+
+.article-search-container {
+    position: relative;
+}
+
+.article-input {
+    width: 100%;
+    padding: 10px 40px 10px 40px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    outline: none;
+    transition: border-color 0.3s;
+}
+
+.article-input.light {
+    background-color: #ffffff;
+    color: #333333;
+}
+
+.article-input.light:focus {
+    border-color: #2563eb;
+}
+
+.article-input.dark {
+    background-color: #1f2937;
+    color: #ffffff;
+}
+
+.article-input.dark:focus {
+    border-color: #6366f1;
+}
+
+/* Icon styles */
+.article-icon {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.icon-svg {
+    height: 20px;
+    width: 20px;
+    color: #888888;
+}
+
+/* Clear button styles */
+.article-clear {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icon-svg-clear {
+    height: 20px;
+    width: 20px;
+    color: #888888;
+    transition: color 0.3s;
+}
+
+.article-clear:hover .icon-svg-clear {
+    color: #e63946;
+}

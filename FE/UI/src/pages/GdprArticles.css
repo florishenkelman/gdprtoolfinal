@@ -1,0 +1,57 @@
+/* Container styling */
+.gdpr-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.gdpr-container.light-theme {
+    background-color: #f9fafb;
+    color: #111827;
+}
+
+.gdpr-container.dark-theme {
+    background-color: #111827;
+    color: #f9fafb;
+}
+
+/* Content layout */
+.gdpr-content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 1024px) {
+    .gdpr-content {
+        flex-direction: row;
+    }
+}
+
+/* Article List */
+.article-list {
+    flex: 1;
+}
+
+/* Saved Articles Sidebar */
+.saved-articles {
+    width: 100%;
+    max-width: 320px;
+}
+
+.saved-articles-box {
+    border-radius: 0.5rem;
+    padding: 1.5rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.saved-articles-box.light-box {
+    background-color: #ffffff;
+}
+
+.saved-articles-box.dark-box {
+    background-color: #1f2937;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}

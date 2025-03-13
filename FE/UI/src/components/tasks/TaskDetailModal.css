@@ -1,0 +1,71 @@
+/* TaskDetailModal.css */
+
+/* Overlay */
+.modal-overlay {
+    position: fixed;
+    inset: 0;
+    z-index: 50;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem; /* p-4 */
+    background-color: rgba(0, 0, 0, 0.5); /* Light mode overlay color */
+    transition: all 0.3s ease; /* transition-all */
+}
+
+body.dark .modal-overlay {
+    background-color: rgba(0, 0, 0, 0.7); /* Dark mode overlay color */
+}
+
+/* Modal Container */
+.modal-container {
+    width: 100%; /* w-full */
+    max-width: 64rem; /* max-w-4xl */
+    max-height: 90vh; /* max-h-[90vh] */
+    overflow-y: auto; /* overflow-y-auto */
+    position: relative; /* relative */
+    border-radius: 0.5rem; /* rounded-lg */
+    box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1); /* shadow-xl */
+    background-color: white; /* bg-white */
+    border: none; /* Default border for light mode */
+}
+
+body.dark .modal-container {
+    background-color: #1f2937; /* bg-gray-800 */
+    border: 1px solid #374151; /* border-gray-700 */
+}
+
+/* Close Button */
+.modal-close-button {
+    position: absolute; /* absolute */
+    top: 1rem; /* top-4 */
+    right: 1rem; /* right-4 */
+    padding: 0.5rem; /* p-2 */
+    border-radius: 9999px; /* rounded-full */
+    transition: background-color 0.3s ease, color 0.3s ease; /* transition-colors */
+    color: #6b7280; /* text-gray-500 */
+}
+
+.modal-close-button:hover {
+    background-color: #f3f4f6; /* hover:bg-gray-100 */
+    color: #374151; /* hover:text-gray-700 */
+}
+
+body.dark .modal-close-button {
+    color: #9ca3af; /* text-gray-400 */
+}
+
+body.dark .modal-close-button:hover {
+    background-color: #374151; /* hover:bg-gray-700 */
+    color: #e5e7eb; /* hover:text-gray-200 */
+}
+
+/* Content */
+.modal-content {
+    padding: 0.25rem; /* p-1 */
+    color: #111827; /* text-gray-900 */
+}
+
+body.dark .modal-content {
+    color: #f9fafb; /* text-gray-100 */
+}
